@@ -1,16 +1,17 @@
-# Style Up Studio
+# 💇 Style Up Studio
 
-Style Up Studio is a full-stack salon and beauty services application that lets customers browse services, book appointments, and manage their accounts, while admins can manage appointments and services from a dedicated admin panel.
+A full-stack salon management system built using React, Node.js, Express.js and MySQL.
 
-## Features
+The application allows customers to explore services, book appointments, and provides an admin dashboard to manage salon operations.
 
-- User registration and login
+## 🚀 Features
+
+- Customer authentication
+- Service browsing
 - Appointment booking
-- Service listing
-- Admin login
-- Admin dashboard for appointments
-- Admin service management
-- Admin creation flow for adding new administrators
+- Admin dashboard
+- Service CRUD management
+- Appointment status management
 
 ## Tech Stack
 
