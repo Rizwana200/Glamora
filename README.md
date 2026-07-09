@@ -1,131 +1,300 @@
 # 💇 Style Up Studio
 
-A full-stack salon management system built using React, Node.js, Express.js and MySQL.
+A **full-stack salon management system** built with **React.js, Node.js, Express.js, and MySQL**.
 
-The application allows customers to explore services, book appointments, and provides an admin dashboard to manage salon operations.
+Style Up Studio is designed to simplify salon operations by allowing customers to browse services, book appointments, and manage their accounts, while providing administrators with a dedicated dashboard to manage services and appointments.
 
-## 🚀 Features
+---
 
-- Customer authentication
-- Service browsing
-- Appointment booking
-- Admin dashboard
-- Service CRUD management
-- Appointment status management
+# ✨ Features
 
-## Tech Stack
+## 👤 Customer Features
 
-### Frontend
-- React
+- User Registration & Login
+- Browse Salon Services
+- View Service Details
+- Book Appointments
+- Responsive User Interface
+
+## 👨‍💼 Admin Features
+
+- Secure Admin Login
+- Admin Dashboard
+- Add, Edit & Delete Services
+- Manage Customer Appointments
+- Update Appointment Status
+- Create New Admin Accounts
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+- React.js
 - Vite
 - React Router
-- Bootstrap
+- Bootstrap 5
 - Axios
+- JavaScript
 
-### Backend
+## Backend
+
 - Node.js
 - Express.js
-- MySQL
+- REST APIs
+- JWT Authentication
 - bcrypt
-- JWT-style token handling
 - dotenv
 
-## Project Structure
+## Database
+
+- MySQL
+
+---
+
+# 📂 Project Structure
 
 ```text
-client/        # React frontend
-server/        # Express backend
+StyleUpStudio
+│
+├── client
+│   ├── src
+│   ├── components
+│   ├── pages
+│   ├── layouts
+│   └── api
+│
+├── server
+│   ├── config
+│   ├── controllers
+│   ├── routes
+│   ├── middleware
+│   └── server.js
+│
+├── screenshots
+│
+├── README.md
+└── .gitignore
 ```
+
+---
+
+# 🔄 Application Workflow
+
+```text
+Customer
+   │
+   ▼
+Register / Login
+   │
+   ▼
+Browse Services
+   │
+   ▼
+Book Appointment
+   │
+   ▼
+MySQL Database
+
+
+Admin
+   │
+   ▼
+Admin Login
+   │
+   ▼
+Dashboard
+   │
+   ▼
+Manage Services
+   │
+   ▼
+Manage Appointments
+```
+
+---
+
+# 📸 Screenshots
+
+> **Note:** Place all screenshots inside the `screenshots` folder.
+
+## 🏠 Home Page
+
+![Home Page](screenshots/home.png)
+
+---
+
+## 💇 Services Page
+
+![Services Page](screenshots/services.png)
+
+---
+
+## 🔐 Login Page
+
+![Login Page](screenshots/login.png)
+
+---
+
+## 📅 Appointment Booking
+
+![Appointment Booking](screenshots/booking.png)
+
+---
+
+## 👨‍💼 Admin Dashboard
+
+![Admin Dashboard](screenshots/admin-dashboard.png)
+
+---
+
+## 🛠️ Admin Service Management
+
+![Admin Services](screenshots/admin-services.png)
+
+---
+
+## 📋 Admin Appointment Management
+
+![Admin Appointments](screenshots/admin-appointments.png)
+
+---
+
+# ⚙️ Installation
 
 ## Prerequisites
 
 Make sure you have installed:
+
 - Node.js
 - npm
 - MySQL
 
-## Installation
+---
 
-### 1. Clone the repository
+## Clone the Repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/rsain4800/StyleUpStudio.git
+
 cd StyleUpStudio
 ```
 
-### 2. Install frontend dependencies
+---
+
+## Install Frontend
 
 ```bash
 cd client
+
 npm install
+
+npm run dev
 ```
 
-### 3. Install backend dependencies
+Frontend runs at:
+
+```
+http://localhost:5173
+```
+
+---
+
+## Install Backend
+
+Open another terminal:
 
 ```bash
-cd ../server
+cd server
+
 npm install
+
+npm run dev
 ```
 
-## Environment Variables
+Backend runs at:
 
-Create a `.env` file inside the server folder with your database and app settings.
+```
+http://localhost:5000
+```
 
-Example:
+---
+
+# 🔐 Environment Variables
+
+Create a `.env` file inside the `server` folder.
 
 ```env
 PORT=5000
+
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=your_password
 DB_NAME=styleup_studio
+
 JWT_SECRET=your_secret_key
 ```
 
-## Running the Project
+---
 
-### Start the backend
+# 🗄️ Database Setup
 
-```bash
-cd server
-npm start
+Create a MySQL database named:
+
+```sql
+CREATE DATABASE styleup_studio;
 ```
 
-### Start the frontend
+Required tables:
 
-```bash
-cd client
-npm run dev
-```
+- users
+- admins
+- services
+- appointments
 
-The frontend will usually run at:
-- http://localhost:5173
+---
 
-The backend will run at:
-- http://localhost:5000
+# 🚀 Future Improvements
 
-## Database Setup
+- Online Payment Integration
+- Image Upload for Services
+- Email Notifications
+- SMS Notifications
+- Appointment Calendar
+- Customer Reviews & Ratings
+- Dashboard Analytics
+- Cloud Deployment
+- Automated Testing
 
-Create a MySQL database named `styleup_studio` and make sure the tables required by the application exist.
+---
 
-If your project uses an `admins` table, make sure it includes at least:
-- `admin_id`
-- `name`
-- `email`
-- `password`
+# 💡 Key Learnings
 
-## Admin Access
+Through this project, I gained practical experience in:
 
-To access the admin panel, you need an admin account already present in the database or created through the admin creation flow.
+- Building RESTful APIs using Express.js
+- React component-based architecture
+- MySQL database design and integration
+- Authentication and authorization
+- Full-stack application development
+- CRUD operations
+- Frontend and backend integration using Axios
 
-## Notes
+---
 
-This project is a great full-stack learning project and can be improved further with:
-- better UI polish
-- stronger validation
-- deployment to cloud platforms
-- test coverage
+# 👨‍💻 Developer
 
-## License
+**Rohit Sain**
 
-This project is for educational and personal development purposes.
+B.Tech (Artificial Intelligence & Data Science)
+
+Jaipur Engineering College and Research Centre (JECRC)
+
+GitHub: **https://github.com/rsain4800**
+
+---
+
+# 📄 License
+
+This project is developed for **educational and portfolio purposes**.
