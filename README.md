@@ -121,43 +121,43 @@ Manage Appointments
 
 ## 🏠 Home Page
 
-![Home Page](screenshots/home.png)
+![Home Page](screenshots/herosection.png.png)
 
 ---
 
 ## 💇 Services Page
 
-![Services Page](screenshots/services.png)
+![Services Page](screenshots/ourservices.png.png)
 
 ---
 
 ## 🔐 Login Page
 
-![Login Page](screenshots/login.png)
+![Login Page](screenshots/loginpage.png.png)
 
 ---
 
 ## 📅 Appointment Booking
 
-![Appointment Booking](screenshots/booking.png)
+![Appointment Booking](screenshots/bookappointment.png.png)
 
 ---
 
 ## 👨‍💼 Admin Dashboard
 
-![Admin Dashboard](screenshots/admin-dashboard.png)
+![Admin Dashboard](screenshots/admindashboardpage.png.png)
 
 ---
 
 ## 🛠️ Admin Service Management
 
-![Admin Services](screenshots/admin-services.png)
+![Admin Services](screenshots/servicespage.png.png)
 
 ---
 
 ## 📋 Admin Appointment Management
 
-![Admin Appointments](screenshots/admin-appointments.png)
+![Admin Appointments](screenshots/adminappointmentpage.png.png)
 
 ---
 
