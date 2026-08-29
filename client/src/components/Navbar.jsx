@@ -12,8 +12,9 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
-          Style Up Studio
+
+        <Link className="navbar-brand glamora-navbar-brand" to="/">
+          Glamora
         </Link>
 
         <button
@@ -30,6 +31,7 @@ function Navbar() {
 
         <div className="collapse navbar-collapse" id="navMenu">
           <ul className="navbar-nav ms-auto">
+
             <li className="nav-item">
               <Link className="nav-link" to="/">
                 Home
@@ -55,6 +57,7 @@ function Navbar() {
                     Welcome, {user.name}
                   </span>
                 </li>
+
                 <li className="nav-item">
                   <Link className="nav-link" to="/dashboard">
                     Dashboard
@@ -88,6 +91,7 @@ function Navbar() {
                 </li>
               </>
             )}
+
           </ul>
         </div>
       </div>

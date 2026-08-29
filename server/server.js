@@ -19,7 +19,7 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/services", serviceRoutes);
 
 app.get("/", (req, res) => {
-  res.send("Style Up Studio API Running...");
+  res.send("Glamora API Running...");
 });
 
 app.use((req, res) => {
