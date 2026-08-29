@@ -213,7 +213,7 @@ Make sure you have the following installed:
 Clone the Glamora repository from GitHub:
 
 ```bash
-git clone [https://github.com/Rizwana200/Glamora.git](https://github.com/Rizwana200/Glamora.git)
+git clone https://github.com/Rizwana200/Glamora.git
 cd Glamora
 ```
 
