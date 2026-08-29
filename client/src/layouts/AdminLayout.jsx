@@ -14,7 +14,7 @@ function AdminLayout() {
     <div className="min-vh-100 bg-light">
       <div className="d-flex">
         <aside className="bg-dark text-white p-4 min-vh-100" style={{ width: "260px" }}>
-          <h3 className="mb-4">Style Up Studio</h3>
+          <h3 className="mb-4">Glamora</h3>
           <p className="text-secondary small">Admin Panel</p>
 
           <nav className="nav flex-column gap-2">

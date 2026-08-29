@@ -633,3 +633,832 @@ textarea {
   color: #ffffff !important;
   transform: scale(1.03);
 }
+.glamora-login-page {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 60px 0;
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(217, 143, 155, 0.18),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 85%,
+      rgba(185, 103, 117, 0.12),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #fffaf8 0%,
+      #fdf1f3 50%,
+      #f8e4e8 100%
+    );
+}
+
+.glamora-login-decoration {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.decoration-one {
+  width: 420px;
+  height: 420px;
+  top: -230px;
+  right: -170px;
+  border: 1px solid rgba(185, 103, 117, 0.2);
+}
+
+.decoration-two {
+  width: 300px;
+  height: 300px;
+  bottom: -180px;
+  left: -140px;
+  background: rgba(217, 143, 155, 0.08);
+}
+
+.glamora-login-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 45px 42px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid #eadcdf;
+  border-radius: 28px;
+  box-shadow:
+    0 25px 60px rgba(70, 35, 45, 0.12),
+    0 5px 20px rgba(70, 35, 45, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+/* Brand */
+
+.glamora-login-brand {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.glamora-login-logo {
+  color: #b96775;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 52px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.glamora-login-line {
+  width: 45px;
+  height: 2px;
+  margin: 12px auto 9px;
+  background: #d98f9b;
+}
+
+.glamora-login-brand p {
+  margin: 0;
+  color: #8b7d81;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+/* Heading */
+
+.glamora-login-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.glamora-login-heading h1 {
+  margin: 0;
+  color: #241d20;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+  font-size: 29px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.glamora-login-heading p {
+  margin: 8px 0 0;
+  color: #8b7d81;
+  font-size: 13px;
+}
+
+/* Fields */
+
+.glamora-login-field {
+  margin-bottom: 21px;
+}
+
+.glamora-login-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: #51474a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.glamora-login-field input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  border: 1px solid #eadcdf;
+  border-radius: 12px;
+  outline: none;
+  background: #fffaf8;
+  color: #241d20;
+  font-size: 14px;
+  transition: 0.25s ease;
+}
+
+.glamora-login-field input::placeholder {
+  color: #b9abad;
+}
+
+.glamora-login-field input:focus {
+  border-color: #b96775;
+  background: #ffffff;
+  box-shadow:
+    0 0 0 3px rgba(185, 103, 117, 0.1),
+    0 5px 15px rgba(185, 103, 117, 0.06);
+}
+
+.glamora-password-label {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Customer button */
+
+.glamora-customer-login {
+  width: 100%;
+  height: 53px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #b96775;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 10px 25px rgba(185, 103, 117, 0.2);
+}
+
+.glamora-customer-login span {
+  font-size: 20px;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.glamora-customer-login:hover {
+  background: #a95867;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(185, 103, 117, 0.28);
+}
+
+.glamora-customer-login:hover span {
+  transform: translateX(4px);
+}
+
+/* Divider */
+
+.glamora-login-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 28px 0;
+  color: #a9959a;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.glamora-login-divider::before,
+.glamora-login-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eadcdf;
+}
+
+/* Admin */
+
+.glamora-admin-login {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 1px solid #d98f9b;
+  border-radius: 30px;
+  background: #ffffff;
+  color: #b96775;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.glamora-admin-login span {
+  font-size: 18px;
+}
+
+.glamora-admin-login:hover {
+  background: #f9e9ec;
+  border-color: #b96775;
+  color: #a95867;
+  transform: translateY(-2px);
+}
+
+/* Register */
+
+.glamora-register-section {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.glamora-register-section p {
+  margin: 0 0 6px;
+  color: #8b7d81;
+  font-size: 13px;
+}
+
+.glamora-register-section a {
+  color: #b96775;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.glamora-register-section a:hover {
+  color: #a95867;
+  text-decoration: underline;
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+
+  .glamora-login-page {
+    padding: 35px 15px;
+  }
+
+  .glamora-login-card {
+    padding: 35px 24px;
+    border-radius: 22px;
+  }
+
+  .glamora-login-logo {
+    font-size: 45px;
+  }
+
+  .glamora-login-heading h1 {
+    font-size: 25px;
+  }
+
+}
+/* =====================================================
+   GLAMORA ADMIN LOGIN
+===================================================== */
+
+.glamora-admin-page {
+  min-height: 100vh;
+  background: #fff8f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 35px;
+}
+
+.admin-login-wrapper {
+  width: min(1100px, 100%);
+  min-height: 650px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  background: #ffffff;
+
+  border-radius: 28px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 25px 70px rgba(80, 40, 50, 0.14);
+}
+
+/* =====================================================
+   LEFT SIDE
+===================================================== */
+
+.admin-brand-section {
+  position: relative;
+
+  padding: 55px;
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(217, 143, 155, 0.25),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      #f9e8eb,
+      #f7dfe4
+    );
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+.admin-brand-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 330px;
+  height: 330px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(185, 103, 117, 0.2);
+
+  right: -150px;
+  bottom: -130px;
+}
+
+.admin-brand-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(185, 103, 117, 0.18);
+
+  left: -100px;
+  top: 230px;
+}
+
+/* Logo */
+
+.admin-brand-logo {
+  position: relative;
+  z-index: 2;
+
+  color: #241d20;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 48px;
+
+  font-style: italic;
+
+  font-weight: 600;
+
+  line-height: 1;
+}
+
+.admin-brand-subtitle {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 10px;
+
+  color: #b96775;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+/* Main text */
+
+.admin-brand-content {
+  position: relative;
+  z-index: 2;
+
+  margin-top: auto;
+  margin-bottom: auto;
+
+  max-width: 410px;
+}
+
+.admin-small-heading {
+  margin: 0 0 15px;
+
+  color: #b96775;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.admin-brand-content h1 {
+  margin: 0;
+
+  color: #241d20;
+
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+
+  font-size: clamp(42px, 4vw, 60px);
+
+  line-height: 1.08;
+
+  font-weight: 600;
+
+  letter-spacing: -2px;
+}
+
+.admin-brand-content h1 span {
+  color: #b96775;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+
+.admin-brand-content > p:last-child {
+  max-width: 370px;
+
+  margin-top: 22px;
+
+  color: #806f74;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+/* Features */
+
+.admin-features {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  gap: 25px;
+}
+
+.admin-features div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-features span {
+  color: #b96775;
+
+  font-family: Georgia, serif;
+
+  font-size: 13px;
+
+  font-style: italic;
+}
+
+.admin-features p {
+  margin: 0;
+
+  color: #6f6064;
+
+  font-size: 10px;
+
+  white-space: nowrap;
+}
+
+/* =====================================================
+   RIGHT SIDE
+===================================================== */
+
+.admin-form-section {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 55px;
+}
+
+.admin-login-card {
+  width: 100%;
+  max-width: 370px;
+}
+
+/* Crown */
+
+.admin-crown {
+  width: 58px;
+  height: 58px;
+
+  margin-bottom: 25px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #b96775;
+
+  background: #f9e9ec;
+
+  font-size: 25px;
+}
+
+/* Heading */
+
+.admin-card-label {
+  margin: 0 0 10px;
+
+  color: #b96775;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.admin-login-card h2 {
+  margin: 0;
+
+  color: #241d20;
+
+  font-size: 32px;
+
+  font-weight: 600;
+
+  letter-spacing: -0.8px;
+}
+
+.admin-card-description {
+  margin: 8px 0 32px;
+
+  color: #948589;
+
+  font-size: 12px;
+}
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.admin-input-group {
+  margin-bottom: 21px;
+}
+
+.admin-input-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #3b3033;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.admin-input-group input {
+  width: 100%;
+
+  height: 52px;
+
+  padding: 0 16px;
+
+  border: 1px solid #eadcdf;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #fffafa;
+
+  color: #241d20;
+
+  font-size: 13px;
+
+  transition: all 0.25s ease;
+}
+
+.admin-input-group input::placeholder {
+  color: #b9abad;
+}
+
+.admin-input-group input:focus {
+  border-color: #b96775;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 4px rgba(185, 103, 117, 0.08);
+}
+
+/* =====================================================
+   SIGN IN BUTTON
+===================================================== */
+
+.admin-signin-btn {
+  width: 100%;
+
+  height: 53px;
+
+  margin-top: 8px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #241d20;
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.admin-signin-btn span {
+  font-size: 18px;
+
+  transition: transform 0.25s ease;
+}
+
+.admin-signin-btn:hover {
+  background: #b96775;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(185, 103, 117, 0.25);
+}
+
+.admin-signin-btn:hover span {
+  transform: translateX(5px);
+}
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.admin-divider {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 28px 0 22px;
+}
+
+.admin-divider span {
+  height: 1px;
+
+  flex: 1;
+
+  background: #eadcdf;
+}
+
+.admin-divider p {
+  margin: 0;
+
+  color: #c2b4b8;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+}
+
+/* Customer login */
+
+.customer-login-link {
+  display: block;
+
+  text-align: center;
+
+  color: #b96775;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  transition: 0.2s ease;
+}
+
+.customer-login-link:hover {
+  color: #241d20;
+
+  text-decoration: underline;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 850px) {
+
+  .glamora-admin-page {
+    padding: 20px;
+  }
+
+  .admin-login-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-brand-section {
+    min-height: 350px;
+
+    padding: 40px;
+  }
+
+  .admin-brand-content {
+    margin-top: 45px;
+  }
+
+  .admin-brand-content h1 {
+    font-size: 42px;
+  }
+
+  .admin-features {
+    margin-top: 35px;
+  }
+
+  .admin-form-section {
+    padding: 45px 35px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .glamora-admin-page {
+    padding: 10px;
+  }
+
+  .admin-login-wrapper {
+    border-radius: 20px;
+  }
+
+  .admin-brand-section {
+    padding: 30px;
+  }
+
+  .admin-brand-logo {
+    font-size: 40px;
+  }
+
+  .admin-brand-content {
+    margin-top: 55px;
+  }
+
+  .admin-brand-content h1 {
+    font-size: 38px;
+  }
+
+  .admin-features {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .admin-form-section {
+    padding: 35px 25px;
+  }
+
+  .admin-login-card h2 {
+    font-size: 28px;
+  }
+}

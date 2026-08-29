@@ -1,5 +1,5 @@
 const crypto = require("crypto");
-const SECRET = process.env.JWT_SECRET || "styleup-dev-secret";
+const SECRET = process.env.JWT_SECRET || "Glamora-dev-secret";
 
 function base64UrlEncode(value) {
   return Buffer.from(value).toString("base64url");

@@ -1,8 +1,8 @@
-# 💇 Style Up Studio
+# 💇 Glamora 💗
 
 A **full-stack salon management system** built with **React.js, Node.js, Express.js, and MySQL**.
 
-Style Up Studio is designed to simplify salon operations by allowing customers to browse services, book appointments, and manage their accounts, while providing administrators with a dedicated dashboard to manage services and appointments.
+Glamora is designed to simplify salon operations by allowing customers to create accounts, browse salon services, book appointments, and manage their salon experience, while providing administrators with a dedicated dashboard to manage services and appointments.
 
 ---
 
@@ -11,12 +11,15 @@ Style Up Studio is designed to simplify salon operations by allowing customers t
 ## 👤 Customer Features
 
 - User Registration & Login
+- Customer Dashboard
 - Browse Salon Services
 - View Service Details
 - Book Appointments
+- Manage Customer Account
 - Responsive User Interface
+- Customer Logout
 
-## 👨‍💼 Admin Features
+## 👑 Admin Features
 
 - Secure Admin Login
 - Admin Dashboard
@@ -24,6 +27,7 @@ Style Up Studio is designed to simplify salon operations by allowing customers t
 - Manage Customer Appointments
 - Update Appointment Status
 - Create New Admin Accounts
+- View Appointment Statistics
 
 ---
 
@@ -37,6 +41,7 @@ Style Up Studio is designed to simplify salon operations by allowing customers t
 - Bootstrap 5
 - Axios
 - JavaScript
+- CSS
 
 ## Backend
 
@@ -56,7 +61,7 @@ Style Up Studio is designed to simplify salon operations by allowing customers t
 # 📂 Project Structure
 
 ```text
-StyleUpStudio
+Glamora
 │
 ├── client
 │   ├── src
@@ -73,6 +78,17 @@ StyleUpStudio
 │   └── server.js
 │
 ├── screenshots
+│   ├── address.png
+│   ├── addservices.png
+│   ├── adminDashboard.png
+│   ├── allappointments.png
+│   ├── bookappointment.png
+│   ├── customerDahboard.png
+│   ├── gallary.png
+│   ├── homepage.png
+│   ├── loginpage.png
+│   ├── registerpage.png
+│   └── servicepage.png
 │
 ├── README.md
 └── .gitignore
@@ -83,175 +99,141 @@ StyleUpStudio
 # 🔄 Application Workflow
 
 ```text
-Customer
-   │
-   ▼
-Register / Login
-   │
-   ▼
-Browse Services
-   │
-   ▼
-Book Appointment
-   │
-   ▼
-MySQL Database
-
-
-Admin
-   │
-   ▼
-Admin Login
-   │
-   ▼
-Dashboard
-   │
-   ▼
-Manage Services
-   │
-   ▼
-Manage Appointments
+                        💗 Glamora
+                             │
+              ┌──────────────┴──────────────┐
+              │                             │
+          👤 Customer                    👑 Admin
+              │                             │
+              ▼                             ▼
+       Register / Login                Admin Login
+              │                             │
+              ▼                             ▼
+       Browse Services               Admin Dashboard
+              │                             │
+              ▼                     ┌────────┴────────┐
+       Book Appointment             │                 │
+              │                     ▼                 ▼
+              ▼              Manage Services   Manage Appointments
+       Customer Dashboard           │                 │
+              │                     │                 │
+              └─────────────────────┴────────┬────────┘
+                                             ▼
+                                      🗄️ MySQL Database
 ```
 
 ---
 
 # 📸 Screenshots
 
-> **Note:** Place all screenshots inside the `screenshots` folder.
+> **Note:** All Glamora screenshots are stored inside the `screenshots` folder.
 
 ## 🏠 Home Page
 
-![Home Page](screenshots/herosection.png.png)
+![Glamora Home Page](screenshots/homepage.png)
 
 ---
 
 ## 💇 Services Page
 
-![Services Page](screenshots/ourservices.png.png)
+![Glamora Services Page](screenshots/servicepage.png)
 
 ---
 
-## 🔐 Login Page
+## 🔐 Customer Login
 
-![Login Page](screenshots/loginpage.png.png)
-
----
-
-## 📅 Appointment Booking
-
-![Appointment Booking](screenshots/bookappointment.png.png)
+![Glamora Login Page](screenshots/loginpage.png)
 
 ---
 
-## 👨‍💼 Admin Dashboard
+## 📝 Customer Registration
 
-![Admin Dashboard](screenshots/admindashboardpage.png.png)
-
----
-
-## 🛠️ Admin Service Management
-
-![Admin Services](screenshots/servicespage.png.png)
+![Glamora Registration Page](screenshots/registerpage.png)
 
 ---
 
-## 📋 Admin Appointment Management
+## 📅 Book Appointment
 
-![Admin Appointments](screenshots/adminappointmentpage.png.png)
+![Glamora Book Appointment](screenshots/bookappointment.png)
+
+---
+
+## 👤 Customer Dashboard
+
+![Glamora Customer Dashboard](screenshots/customerDahboard.png)
+
+---
+
+## 👑 Admin Dashboard
+
+![Glamora Admin Dashboard](screenshots/adminDashboard.png)
+
+---
+
+## 📋 All Appointments
+
+![Glamora All Appointments](screenshots/allappointments.png)
+
+---
+
+## ➕ Add Services
+
+![Glamora Add Services](screenshots/addservices.png)
+
+---
+
+## 🖼️ Gallery
+
+![Glamora Gallery](screenshots/gallary.png)
+
+---
+
+## 📍 Salon Address
+
+![Glamora Address](screenshots/address.png)
 
 ---
 
 # ⚙️ Installation
 
-## Prerequisites
+Follow these steps to run **Glamora** locally on your system.
 
-Make sure you have installed:
+## 📋 Prerequisites
+
+Make sure you have the following installed:
 
 - Node.js
 - npm
 - MySQL
+- Git
+- VS Code
 
----
+## 📥 Clone Glamora
 
-## Clone the Repository
-
-```bash
-git clone https://github.com/rsain4800/StyleUpStudio.git
-
-cd StyleUpStudio
-```
-
----
-
-## Install Frontend
+Clone the Glamora repository from GitHub:
 
 ```bash
-cd client
-
-npm install
-
-npm run dev
+git clone [https://github.com/Rizwana200/Glamora.git](https://github.com/Rizwana200/Glamora.git)
+cd Glamora
 ```
 
-Frontend runs at:
+## 🚀 Running the Project
 
-```
-http://localhost:5173
-```
-
----
-
-## Install Backend
-
-Open another terminal:
+### 1. Setup Backend (Server)
 
 ```bash
 cd server
-
 npm install
+npm start
+```
 
+### 2. Setup Frontend (Client)
+
+```bash
+cd client
+npm install
 npm run dev
 ```
-
-Backend runs at:
-
-```
-http://localhost:5000
-```
-
----
-
-# 🔐 Environment Variables
-
-Create a `.env` file inside the `server` folder.
-
-```env
-PORT=5000
-
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=your_password
-DB_NAME=styleup_studio
-
-JWT_SECRET=your_secret_key
-```
-
----
-
-# 🗄️ Database Setup
-
-Create a MySQL database named:
-
-```sql
-CREATE DATABASE styleup_studio;
-```
-
-Required tables:
-
-- users
-- admins
-- services
-- appointments
 
 ---
 
@@ -283,18 +265,28 @@ Through this project, I gained practical experience in:
 
 ---
 
-# 👨‍💻 Developer
+# 👩‍💻 Developer
 
-**Rohit Sain**
+## Rizwana 💗
 
-B.Tech (Artificial Intelligence & Data Science)
+**B.Tech – Computer Science & Engineering**
 
-Jaipur Engineering College and Research Centre (JECRC)
+### GitHub
 
-GitHub: **https://github.com/rsain4800**
+[https://github.com/Rizwana200](https://github.com/Rizwana200)
 
 ---
 
-# 📄 License
+# 💗 Glamora
 
-This project is developed for **educational and portfolio purposes**.
+**BEAUTY • STYLE • CONFIDENCE**
+
+A full-stack salon management system built to provide a simple, elegant, and personalized beauty experience.
+
+Built with: **React.js • Node.js • Express.js • MySQL**
+
+---
+
+## 🔗 GitHub Repository
+
+[https://github.com/Rizwana200/Glamora.git](https://github.com/Rizwana200/Glamora.git)

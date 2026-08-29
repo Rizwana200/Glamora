@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import api from "../api/axios";
 
 function AdminLogin() {
@@ -27,61 +27,160 @@ function AdminLogin() {
         "admin",
         JSON.stringify(response.data.admin)
       );
-      localStorage.setItem("adminToken", response.data.token);
-      
+
+      localStorage.setItem(
+        "adminToken",
+        response.data.token
+      );
 
       alert(response.data.message);
 
       navigate("/admin/dashboard");
-
     } catch (error) {
-      alert(error.response?.data?.message || "Login Failed");
+      alert(
+        error.response?.data?.message ||
+        "Admin Login Failed"
+      );
     }
   };
 
   return (
-    <> 
-      <section>
-        <nav className="navbar navbar-dark bg-dark">
-          <div className="container">
-            <span className="navbar-brand">
-              Style Up Studio - Admin
-            </span>
+    <div className="glamora-admin-page">
+
+      <div className="admin-login-wrapper">
+
+        {/* LEFT BRANDING */}
+        <div className="admin-brand-section">
+
+          <div className="admin-brand-logo">
+            Glamora
           </div>
-        </nav>
-      </section>
 
-      <div className="container py-5">
-        <h2 className="text-center">Admin Login</h2>
+          <div className="admin-brand-subtitle">
+            BEAUTY • STYLE • CONFIDENCE
+          </div>
 
-        <form
-          className="col-md-5 mx-auto mt-4"
-          onSubmit={handleSubmit}
-        >
-          <input
-            className="form-control mb-3"
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={formData.email}
-            onChange={handleChange}
-          />
+          <div className="admin-brand-content">
+            <p className="admin-small-heading">
+              GLAMORA SALON
+            </p>
 
-          <input
-            className="form-control mb-3"
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={formData.password}
-            onChange={handleChange}
-          />
+            <h1>
+              Where beauty
+              <br />
+              meets <span>elegance.</span>
+            </h1>
 
-          <button className="btn btn-dark w-100">
-            Login
-          </button>
-        </form>
+            <p>
+              Manage your salon appointments, services
+              and customers from one beautiful place.
+            </p>
+          </div>
+
+          <div className="admin-features">
+
+            <div>
+              <span>01</span>
+              <p>Manage Appointments</p>
+            </div>
+
+            <div>
+              <span>02</span>
+              <p>Manage Services</p>
+            </div>
+
+            <div>
+              <span>03</span>
+              <p>Manage Customers</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* RIGHT LOGIN */}
+        <div className="admin-form-section">
+
+          <div className="admin-login-card">
+
+            <div className="admin-crown">
+              ♕
+            </div>
+
+            <p className="admin-card-label">
+              GLAMORA ADMIN
+            </p>
+
+            <h2>
+              Welcome back
+            </h2>
+
+            <p className="admin-card-description">
+              Sign in to access your salon dashboard
+            </p>
+
+            <form onSubmit={handleSubmit}>
+
+              <div className="admin-input-group">
+                <label>
+                  Email Address
+                </label>
+
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="admin@glamora.com"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              <div className="admin-input-group">
+                <label>
+                  Password
+                </label>
+
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Enter your password"
+                  value={formData.password}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="admin-signin-btn"
+              >
+                Sign In
+                <span>→</span>
+              </button>
+
+            </form>
+
+            <div className="admin-divider">
+              <span></span>
+              <p>GLAMORA</p>
+              <span></span>
+            </div>
+
+            <Link
+              to="/login"
+              className="customer-login-link"
+            >
+              ← Login as Customer
+            </Link>
+
+          </div>
+
+        </div>
+
       </div>
-    </> 
+
+    </div>
   );
 }
 

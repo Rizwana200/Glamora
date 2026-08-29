@@ -5,12 +5,13 @@ import "./Register.css";
 
 function Register() {
   const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     password: "",
-    confirmPassword: ""
+    confirmPassword: "",
   });
 
   const [showPassword, setShowPassword] = useState(false);
@@ -20,15 +21,18 @@ function Register() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
     }));
+
     setErrorMessage("");
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     setErrorMessage("");
     setSuccessMessage("");
 
@@ -50,11 +54,9 @@ function Register() {
         password: formData.password,
       });
 
-      setSuccessMessage(response.data.message || "Registration successful!");
-      
-      setTimeout(() => {
-        navigate("/login");
-      }, 2000);
+      setSuccessMessage(
+        response.data.message || "Registration successful!"
+      );
 
       setFormData({
         name: "",
@@ -64,91 +66,104 @@ function Register() {
         confirmPassword: "",
       });
 
+      setTimeout(() => {
+        navigate("/login");
+      }, 2000);
     } catch (error) {
-      setErrorMessage(error.response?.data?.message || "Registration failed");
+      setErrorMessage(
+        error.response?.data?.message || "Registration failed"
+      );
     }
   };
 
   return (
     <section className="register-container">
       <div className="register-row">
-        {/* Left Side - Info Section */}
-        <div className="register-col-md-6">
-          <div className="info-content">
-            <div className="logo-section">
-              <h1 className="brand-name">Style Up</h1>
-              <p className="brand-subtitle">Beauty & Salon Network</p>
-            </div>
 
-            <h2 className="info-title">
-              Join Our Growing <br />
-              <span className="highlight">Professional Network</span>
+        {/* LEFT SIDE */}
+        <div className="register-info">
+
+          <div className="register-logo">
+            <h1>Glamora</h1>
+            <p>BEAUTY • STYLE • CONFIDENCE</p>
+          </div>
+
+          <div className="register-welcome">
+            <span>✦</span>
+
+            <h2>
+              Your Beauty Journey
+              <br />
+              <strong>Starts Here</strong>
             </h2>
 
-            <p className="info-description">
-              Style Up Studios is a premium salon and beauty services platform connecting talented professionals with customers seeking quality beauty treatments across all categories.
+            <p>
+              Create your Glamora account and enjoy a beautiful,
+              simple and personalized salon experience.
             </p>
-
-            <div className="stats-container">
-              <div className="stat-card">
-                <div className="stat-number">500+</div>
-                <div className="stat-label">Beauty Professionals</div>
-              </div>
-              <div className="stat-card">
-                <div className="stat-number">10K+</div>
-                <div className="stat-label">Happy Customers</div>
-              </div>
-              <div className="stat-card">
-                <div className="stat-number">50+</div>
-                <div className="stat-label">Service Types</div>
-              </div>
-            </div>
-
-            <div className="benefits-list">
-              <div className="benefit-item">
-                <span className="check-icon">✓</span>
-                <span>Easy appointment booking</span>
-              </div>
-              <div className="benefit-item">
-                <span className="check-icon">✓</span>
-                <span>Secure payment processing</span>
-              </div>
-              <div className="benefit-item">
-                <span className="check-icon">✓</span>
-                <span>Professional profile management</span>
-              </div>
-            </div>
           </div>
+
+          <div className="register-features">
+
+            <div className="feature-item">
+              <div className="feature-icon">✦</div>
+              <div>
+                <h3>Easy Booking</h3>
+                <p>Book your favorite salon services easily.</p>
+              </div>
+            </div>
+
+            <div className="feature-item">
+              <div className="feature-icon">♡</div>
+              <div>
+                <h3>Personal Experience</h3>
+                <p>Keep track of your appointments in one place.</p>
+              </div>
+            </div>
+
+            <div className="feature-item">
+              <div className="feature-icon">✓</div>
+              <div>
+                <h3>Secure Account</h3>
+                <p>Your personal information stays protected.</p>
+              </div>
+            </div>
+
+          </div>
+
         </div>
 
-        {/* Right Side - Form Section */}
-        <div className="register-form-col-md-6">
-          <div className="form-container">
-            <div className="form-header">
-              <h2 className="form-title">Welcome to Style Up</h2>
-              <p className="form-subtitle">Create your account to get started</p>
+        {/* RIGHT SIDE */}
+        <div className="register-form-section">
+
+          <div className="register-card">
+
+            <div className="register-card-header">
+              <h2>Create Account</h2>
+              <p>
+                Join Glamora and discover your beauty experience.
+              </p>
             </div>
 
             {successMessage && (
-              <div className="alert-success">
-                <span className="success-icon">✓</span>
-                <span>{successMessage}</span>
+              <div className="register-success">
+                ✓ {successMessage}
               </div>
             )}
 
             {errorMessage && (
-              <div className="alert-error">
-                <span className="error-icon">!</span>
-                <span>{errorMessage}</span>
+              <div className="register-error">
+                ! {errorMessage}
               </div>
             )}
 
-            <form onSubmit={handleSubmit} className="register-form">
-              <div className="form-group">
-                <label className="form-label">Full Name</label>
+            <form onSubmit={handleSubmit}>
+
+              <div className="register-form-group">
+                <label>Full Name</label>
+
                 <input
                   type="text"
-                  className="form-input"
                   name="name"
                   placeholder="Enter your full name"
                   value={formData.name}
@@ -157,11 +172,11 @@ function Register() {
                 />
               </div>
 
-              <div className="form-group">
-                <label className="form-label">Email Address</label>
+              <div className="register-form-group">
+                <label>Email Address</label>
+
                 <input
                   type="email"
-                  className="form-input"
                   name="email"
                   placeholder="your.email@example.com"
                   value={formData.email}
@@ -170,11 +185,11 @@ function Register() {
                 />
               </div>
 
-              <div className="form-group">
-                <label className="form-label">Phone Number</label>
+              <div className="register-form-group">
+                <label>Phone Number</label>
+
                 <input
                   type="tel"
-                  className="form-input"
                   name="phone"
                   placeholder="+91 XXXXX XXXXX"
                   value={formData.phone}
@@ -183,69 +198,78 @@ function Register() {
                 />
               </div>
 
-              <div className="form-group">
-                <label className="form-label">Password</label>
-                <div className="password-input-wrapper">
+              <div className="register-form-group">
+                <label>Password</label>
+
+                <div className="register-password">
                   <input
                     type={showPassword ? "text" : "password"}
-                    className="form-input"
                     name="password"
                     placeholder="Minimum 8 characters"
                     value={formData.password}
                     onChange={handleChange}
                     required
                   />
+
                   <button
                     type="button"
-                    className="password-toggle"
-                    onClick={() => setShowPassword(!showPassword)}
+                    onClick={() =>
+                      setShowPassword(!showPassword)
+                    }
                   >
                     {showPassword ? "Hide" : "Show"}
                   </button>
                 </div>
               </div>
 
-              <div className="form-group">
-                <label className="form-label">Confirm Password</label>
-                <div className="password-input-wrapper">
+              <div className="register-form-group">
+                <label>Confirm Password</label>
+
+                <div className="register-password">
                   <input
                     type={showConfirmPassword ? "text" : "password"}
-                    className="form-input"
                     name="confirmPassword"
                     placeholder="Re-enter your password"
                     value={formData.confirmPassword}
                     onChange={handleChange}
                     required
                   />
+
                   <button
                     type="button"
-                    className="password-toggle"
-                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                    onClick={() =>
+                      setShowConfirmPassword(!showConfirmPassword)
+                    }
                   >
                     {showConfirmPassword ? "Hide" : "Show"}
                   </button>
                 </div>
               </div>
 
-              <button type="submit" className="btn-create-account">
-                Create Account
+              <button
+                type="submit"
+                className="register-create-button"
+              >
+                Create My Account
               </button>
+
             </form>
 
-            <div className="form-footer">
-              <p>Already have an account?{" "}
-                <Link to="/login" className="login-link">
-                  Sign in
-                </Link>
+            <div className="register-login">
+              <p>
+                Already have an account?{" "}
+                <Link to="/login">Sign in</Link>
               </p>
             </div>
 
-            <div className="security-badge">
-              <span className="badge-icon">🔒</span>
-              <span className="badge-text">Secure & Encrypted</span>
+            <div className="register-secure">
+              🔒 Secure & Encrypted
             </div>
+
           </div>
+
         </div>
+
       </div>
     </section>
   );
